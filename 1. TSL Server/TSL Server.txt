@@ -1,0 +1,21 @@
+In this assignment, you'll setup a sever
+
+Step I: Setup your aws LAMP Ubuntu server
+
+For this task, follow Setting up an "AWS EC2 Instance with LAMP and GIT" tutorial on BeachBoard (Useful links) . DigitalOcean is OK too but AWS is recommended. Make sure you can SSH to your LAMP server. Make sure you can pull changes from your github repository on your server.
+
+You can use Node as your web server engine instead of Apache or nginx. 
+
+Next, get a free domain (register with namecheap using your .edu email). In your DNS records, make sure your domain points to your aws instance. Make sure all is good and "It works".
+
+You will demonstrate that your server is up and running and you can pull your github repo from your sever. The deadline for this step will be determined in class.
+
+
+
+Step II: A simple HTTPS Server (separate deadline from the above step)
+
+By now, you have a simple HTTP server that runs on either Apache or Node.
+
+Next, use "Let's Encrypt" to setup a free certificate (all instructions on Let's Encrypt). Test your TLS configuration with SSL Labs.  Take a look at the "SSL Config" tutorial on Useful links (Useful links, for Apache).
+
+You will be graded based on your SSL Labs performance. Make sure to follow the feedback that you receive from SSL Labs and you receive an "A+" grade from their tests.

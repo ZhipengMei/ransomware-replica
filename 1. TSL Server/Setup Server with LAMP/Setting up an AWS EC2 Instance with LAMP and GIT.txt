@@ -1,0 +1,21 @@
+Good (though a bit old) tutorial:
+
+http://devoncmather.com/setting-aws-ec2-instance-lamp-git/
+
+Install the latest Ubuntu.
+
+
+
+More resources:
+
+http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/get-set-up-for-amazon-ec2.html
+
+AWS Identity and Access Management (IAM) is a web service that enables AWS account owners to create and manage multiple users and groups, along with their access and credentials, all under one AWS account. More info at: 
+http://docs.aws.amazon.com/IAM/latest/UserGuide/getting-started.html
+
+https://help.ubuntu.com/community/ApacheMySQLPHP
+
+
+Old Youtube:
+
+https://www.youtube.com/watch?v=wNr7YqjjzOY
