@@ -1,8 +1,8 @@
 # *Group Number One*
 
-CECS 378: Introduction to Computer Security Principles
+**Welcome to Group Number One repository**
 
-Class Project
+This repository contains course work alongside with **[CECS 378: Introduction to Computer Security Principles](http://web.csulb.edu/divisions/aa/catalog/current/coe/computer_engineering/cecs_ud.html)**. The purpose of having course works as open source is for students to interact and help each other to learn more about cyber security concepts. Documentations are tutorials/questionnaires to guide beginners step by step to start and finish the project.
 
 ## Documentations
 
@@ -14,7 +14,7 @@ Class Project
 * Use [SSLlabs](https://www.ssllabs.com/)
  to test the site's certificate and configuration
 
-- [x] [2. Encryption](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb) ```(Jupyter Notebook with Python3)```
+- [x] [2. Encryption](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb) ([Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/))
 * (C, IV)= Myencrypt(message, key)
 * (C, IV, key, ext)= MyfileEncrypt (filepath)
 * (RSACipher, C, IV, ext)= MyRSAEncrypt(filepath, RSA_Publickey_filepath)
