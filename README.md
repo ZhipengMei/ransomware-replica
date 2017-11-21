@@ -21,6 +21,8 @@ This repository contains course work alongside with **[CECS 378: Introduction to
 
 File format: [Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/)
 
+Library used: [cryptography](https://cryptography.io/en/latest/hazmat/primitives/)
+
 ### (C, IV)= Myencrypt(message, key)
 
 Sample output:
