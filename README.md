@@ -17,20 +17,23 @@ This repository contains course work alongside with **[CECS 378: Introduction to
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
 
-## [2. Encryption](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb) ([Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/))
-* (C, IV)= Myencrypt(message, key)
+## [2. Encryption](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
+
+File format: [Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/)
+
+### (C, IV)= Myencrypt(message, key)
 
 Sample output:
 
 ![Myencrypt output](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/encrypt1.png)
 
-* (C, IV, key, ext)= MyfileEncrypt (filepath)
+### (C, IV, key, ext)= MyfileEncrypt (filepath)
 
 Sample output:
 
 ![MyfileEncrypt output](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/encrypt2.png)
 
-* (RSACipher, C, IV, ext)= MyRSAEncrypt(filepath, RSA_Publickey_filepath)
+### (RSACipher, C, IV, ext)= MyRSAEncrypt(filepath, RSA_Publickey_filepath)
 
 Sample output:
 
