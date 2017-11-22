@@ -59,8 +59,8 @@ ServerName Name.name
 
 #### Deploy Let's Encrypt certificates
 Automatically enable HTTPS on your website with EFF's [Certbot](https://certbot.eff.org/#ubuntuxenial-apache)
-####Use [SSLlabs](https://www.ssllabs.com/)
- to test the site's certificate and configuration
+
+#### Site's certificate and configuration testing with [SSLlabs](https://www.ssllabs.com/)
  
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
