@@ -65,28 +65,41 @@ Automatically enable HTTPS on your website with EFF's [Certbot](https://certbot.
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
 
-## 2. [Encryption](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
+## 2. [Encryption](https://en.wikipedia.org/wiki/Encryption)
 
+[Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
+|
 File format: [Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/)
-
-Library used: [cryptography](https://cryptography.io/en/latest/hazmat/primitives/)
+|
+Library: [Cryptography hazmat](https://cryptography.io/en/latest/hazmat/primitives/)
 
 ### (C, IV)= Myencrypt(message, key)
 
 Sample output:
+```
+Encrypted Message:
+(b'\xe0\t\xb1\x17\x82\xa8o\xec\xf9\x1c^\x9b\xa6b\x0b\xb9[cH\xba\xc3\xcb\xe4\xca6SM\xdb\x9e\xe8\x7f\xb5', b'\x9c|Xk\xff\x15\xc3\xc5\xff\x96Y\xce\x9d\x8d\xd7\x0b')
 
-![Myencrypt output](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/encrypt1.png)
+Dencrypted Message:
+'a secret message'
+```
 
 ### (C, IV, key, ext)= MyfileEncrypt (filepath)
 
 Sample output:
 
-![MyfileEncrypt output](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/encrypt2.png)
-
+```
+Enter a file path for encrypted file output such as "encrypted_image": enc_file
+Enter a file path for previously encrypted file: enc_file
+Enter a file path for decrypted file output such as "decrypted_image": dec_file
+```
 ### (RSACipher, C, IV, ext)= MyRSAEncrypt(filepath, RSA_Publickey_filepath)
 
 Sample output:
 
-![MyRSAEncrypt output](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/encrypt3.png)
-
+```
+Enter a file path for encrypted file output such as "encrypted_image": enc_file2
+Enter a file path for previously encrypted file: enc_file2
+Enter a file path for decrypted file output such as "decrypted_image": dec_file2
+```
 ## 3. [RSA File](https://github.com/AnimeMei/GroupNumberOne/blob/master/3.%20RSA%20File/RSA%20File%20-%20CECS%20378%20-%20GroupNumberOne.ipynb)
