@@ -6,7 +6,7 @@ This repository contains course work alongside with **[CECS 378: Introduction to
 
 # Documentations
 
-## [1. Transport Layer Security](https://github.com/AnimeMei/GroupNumberOne/tree/master/1.%20TSL%20Server)
+## 1. [Transport Layer Security](https://github.com/AnimeMei/GroupNumberOne/tree/master/1.%20TSL%20Server)
 
 * [Setting up an AWS EC2 Instance with LAMP and GIT](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/Setting%20up%20an%20AWS%20EC2%20Instance%20with%20LAMP%20and%20GIT.txt)
 * [SSL Config Apache2](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/SSL%20Config%20Apache2.txt)
@@ -17,7 +17,7 @@ This repository contains course work alongside with **[CECS 378: Introduction to
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
 
-## [2. Encryption](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
+## 2. [Encryption](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
 
 File format: [Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/)
 
@@ -40,3 +40,5 @@ Sample output:
 Sample output:
 
 ![MyRSAEncrypt output](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/encrypt3.png)
+
+## 3. [RSA File](https://github.com/AnimeMei/GroupNumberOne/blob/master/3.%20RSA%20File/RSA%20File%20-%20CECS%20378%20-%20GroupNumberOne.ipynb)
