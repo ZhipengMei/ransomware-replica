@@ -11,7 +11,7 @@ This repository contains course work alongside with **[CECS 378: Introduction to
 Tutorial: [Setting up an AWS EC2 Instance with LAMP and GIT](http://devoncmather.com/setting-aws-ec2-instance-lamp-git/)
 
 #### Step 1:
-[Setting up an AWS EC2 Instance with LAMP and GIT](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/Setting%20up%20an%20AWS%20EC2%20Instance%20with%20LAMP%20and%20GIT.txt)
+[Setting up an **AWS EC2** Instance with **LAMP** and **GIT**](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/Setting%20up%20an%20AWS%20EC2%20Instance%20with%20LAMP%20and%20GIT.txt)
 
 [Resources](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/Setting%20up%20an%20AWS%20EC2%20Instance%20with%20LAMP%20and%20GIT.txt)
 
@@ -59,10 +59,10 @@ ServerName Name.name
 
 #### Step 4:
 Deploy Let's [Encrypt certificates](https://en.wikipedia.org/wiki/Let%27s_Encrypt)
-Automatically enable [HTTPS](https://en.wikipedia.org/wiki/HTTPS) on your website with [EFF](https://www.eff.org/about)'s [Certbot](https://certbot.eff.org/#ubuntuxenial-apache)
+Automatically enable [HTTPS](https://en.wikipedia.org/wiki/HTTPS) on your website with [EFF](https://www.eff.org/about)'s [**Certbot**](https://certbot.eff.org/#ubuntuxenial-apache)
 
 #### Step 5:
-Site's [certificate](https://en.wikipedia.org/wiki/Certificate_authority) and configuration testing with [SSLlabs](https://www.ssllabs.com/)
+Site's [certificate](https://en.wikipedia.org/wiki/Certificate_authority) and configuration testing with [**SSLlabs**](https://www.ssllabs.com/)
  
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
