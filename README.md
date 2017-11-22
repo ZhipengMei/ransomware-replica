@@ -58,11 +58,11 @@ ServerName Name.name
 [Resources](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/SSL%20Config%20Apache2.txt)
 
 #### Step 4:
-Deploy Let's Encrypt certificates
-Automatically enable HTTPS on your website with EFF's [Certbot](https://certbot.eff.org/#ubuntuxenial-apache)
+Deploy Let's [Encrypt certificates](https://en.wikipedia.org/wiki/Let%27s_Encrypt)
+Automatically enable [HTTPS](https://en.wikipedia.org/wiki/HTTPS) on your website with [EFF](https://www.eff.org/about)'s [Certbot](https://certbot.eff.org/#ubuntuxenial-apache)
 
 #### Step 5:
-Site's certificate and configuration testing with [SSLlabs](https://www.ssllabs.com/)
+Site's [certificate](https://en.wikipedia.org/wiki/Certificate_authority) and configuration testing with [SSLlabs](https://www.ssllabs.com/)
  
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
