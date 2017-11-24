@@ -104,4 +104,4 @@ Enter a file path for encrypted file output such as "encrypted_image": enc_file2
 Enter a file path for previously encrypted file: enc_file2
 Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ```
-## 3. [RSA File](https://github.com/AnimeMei/GroupNumberOne/blob/master/3.%20RSA%20File/RSA%20File%20-%20CECS%20378%20-%20GroupNumberOne.ipynb)
+## 3. [RSA File](https://github.com/AnimeMei/GroupNumberOne/blob/master/3.%20RSA%20File/Rough%20Draft%20-%20(RSA%20File%20-%20CECS%20378%20-%20GroupNumberOne).ipynb)
