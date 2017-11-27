@@ -9,23 +9,30 @@ Table of contents
 
   * [Group Number One](#group-number-one)
   * [Documentations](#documentations)
-  
-<!-- 
-* [Installation](#installation)
+    * [1. Transport Layer Security](#transport-layer-security)
+    * [2. Encryption](#encryption)
+    * [3. RSA File](#rsa-file)
+
+
+
+<!--
+  * [Installation](#installation)
   * [Usage](#usage)
-    * [STDIN](#stdin)
     * [Local files](#local-files)
     * [Remote files](#remote-files)
     * [Multiple files](#multiple-files)
     * [Combo](#combo)
   * [Tests](#tests)
-  * [Dependency](#dependency) -->
+  * [Dependency](#dependency)
+
+-->
 
 
 Documentations
 ==============
 
-## 1. [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+[Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+==========================
 
 #### Step 1:
 
@@ -85,7 +92,8 @@ Site's [certificate](https://en.wikipedia.org/wiki/Certificate_authority) and co
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
 
-## 2. [Encryption](https://en.wikipedia.org/wiki/Encryption)
+[Encryption](https://en.wikipedia.org/wiki/Encryption)
+============
 
 [Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/2_Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
 |
@@ -122,7 +130,9 @@ Enter a file path for encrypted file output such as "encrypted_image": enc_file2
 Enter a file path for previously encrypted file: enc_file2
 Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ```
-## 3. RSA File
+
+RSA File
+========
 
 [View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/drafts/Draft2_Finished_Version.ipynb)
 
