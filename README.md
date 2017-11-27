@@ -11,7 +11,10 @@ Table of contents
   * [Documentations](#documentations)
     * [1. Transport Layer Security](#transport-layer-security)
       * [Step 1: Setting up an AWS EC2 Instance with LAMP and GIT](#step-1)
-
+      * [Step 2: SSL Config Apache2](#step-2)
+      * [Step 3: Redirect to HTTPS from HTTP](#step-3)
+      * [Step 4: Certbot](#step-4)
+      * [Step 5: SSLlabs](#step-5)
     * [2. Encryption](#encryption)
     * [3. RSA File](#rsa-file)
 
