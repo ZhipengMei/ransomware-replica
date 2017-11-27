@@ -114,21 +114,6 @@ Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ### macOS Installation:
     git clone https://github.com/AnimeMei/GroupNumberOne.git
     cd GroupNumberOne/3_RSA_File
-    
-Move files into **GroupNumberOne/3_RSA_File** directory for encryption:
-  
-    GroupNumberOne/3_RSA_File/
-    |-- drafts/
-    |
-    |-- exe/ 
-    |   |-- encrypt.sh
-    |   |-- decrypt.sh
-    |
-    |-- hello.png
-    |-- hi.png
-   
-E.g. **hello.png** and **hi.png** will be encrypted if executed.
-
 
 Execute the project:
 
@@ -172,6 +157,20 @@ Execute the project:
     ./run_decrypt.sh
     
 ### Sample output:
+
+Move files into **GroupNumberOne/3_RSA_File** directory for encryption:
+  
+    GroupNumberOne/3_RSA_File/
+    |-- drafts/
+    |
+    |-- exe/ 
+    |   |-- encrypt.sh
+    |   |-- decrypt.sh
+    |
+    |-- hello.jpg
+    |-- hi.png
+   
+E.g. **hello.png** and **hi.png** will be encrypted if executed.
 
 **./run_encrypt.sh**
 ```
