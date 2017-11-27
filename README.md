@@ -184,17 +184,9 @@ Execute the project:
 
 ### Windows Installation:
     git clone https://github.com/AnimeMei/GroupNumberOne.git
-    cd GroupNumberOne/3_RSA_File
-
-Execute the project:
-
-    chmod +x exe/run_encrypt.sh
-    chmod +x exe/run_decrypt.sh
+    cd GroupNumberOne/3_RSA_File/exe
     
-    ./exe/run_encrypt.sh
-    ./exe/run_decrypt.sh
-    
-Or move **FileMacEncrypt.exe** to a directory contains files ready to encrypt.
+Move **FileMacEncrypt.exe** to a directory contains files ready to encrypt.
     
     GroupNumberOne/3_RSA_File/
     |-- drafts/
@@ -206,13 +198,14 @@ Or move **FileMacEncrypt.exe** to a directory contains files ready to encrypt.
     |-- hello.jpg
     |-- hi.png
     
-move to
+move .exe file
     
     MyFolder/
     |-- FileMacEncrypt.exe
     |-- file1.jpg
     |-- file2.png
- 
+
+E.g. **file1.jpg** and **file2.png** will be encrypted if executed.
 Run **FileMacEncrypt.exe**
     
 ### Sample output:
@@ -228,8 +221,17 @@ Move files into **GroupNumberOne/3_RSA_File** directory for encryption:
     |
     |-- hello.jpg
     |-- hi.png
+    
+Or move **exe** folder to a directory contains files ready to encrypt.
+
+    MyFolder/
+    |-- exe/ 
+    |   |-- encrypt.sh
+    |   |-- decrypt.sh
+    |
+    |-- hello.jpg
    
-E.g. **hello.png** and **hi.png** will be encrypted if executed.
+E.g. **hello.jpg** will be encrypted if executed.
 
 **./exe/run_encrypt.sh**
 ```
