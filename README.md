@@ -171,7 +171,7 @@ Move files into **GroupNumberOne/3_RSA_File** directory for encryption:
    
 E.g. **hello.png** and **hi.png** will be encrypted if executed.
 
-**./run_encrypt.sh**
+**./exe/run_encrypt.sh**
 ```
 Success: Created "public.pem" and "private.pem" 
 MyfileEncryptMAC...running
@@ -182,7 +182,7 @@ Success: Encrypted file with a tag.
 Complete: Encrypted file named "../GroupNumberOne/3. RSA File/hello.encrypted.jpg".
 ```
 
-**./run_decrypt.sh**
+**./exe/run_decrypt.sh**
 ```
 MyfileDecryptMAC...running
 Success: Tag verified.
