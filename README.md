@@ -106,7 +106,7 @@ Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ```
 ## 3. RSA File
 
-[View Source Code](https://github.com/PizzaPat/Email_Spam_Specification/blob/master/Naive%20Bayes%20-%20Email%20Spam%20Classifier.ipynb)
+[View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3.%20RSA%20File/drafts/Draft%202%20-%20Finished%20Version.ipynb)
 
 ## System Requirements
  [Python 3.6](https://www.python.org/downloads/release/python-361/) | [Cryptography hazmat](https://cryptography.io/en/latest/hazmat/primitives/)
@@ -170,3 +170,28 @@ Execute the project:
     
     ./run_encrypt.sh
     ./run_decrypt.sh
+    
+### Sample output:
+
+**./run_encrypt.sh**
+```
+Success: Created "public.pem" and "private.pem" 
+MyfileEncryptMAC...running
+Success: Encryption finished.
+Success: HMAC tag finished.
+MyencryptMAC complete.
+Success: Encrypted file with a tag.
+Complete: Encrypted file named "../GroupNumberOne/3. RSA File/hello.encrypted.jpg".
+```
+
+**./run_decrypt.sh**
+```
+MyfileDecryptMAC...running
+Success: Tag verified.
+MydecryptMAC Complete.
+
+Success: Decrypted file with a tag. 
+
+Complete: Decrypted file named "hello.decrypted.jpg".
+```
+
