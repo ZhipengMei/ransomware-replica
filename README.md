@@ -8,12 +8,11 @@ This repository contains course work alongside with **[CECS 378: Introduction to
 
 ## 1. [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 
+#### Step 1:
+
 Tutorial: [Setting up an AWS EC2 Instance with LAMP and GIT](http://devoncmather.com/setting-aws-ec2-instance-lamp-git/)
 
-#### Step 1:
-[Setting up an **AWS EC2** Instance with **LAMP** and **GIT**](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/Setting%20up%20an%20AWS%20EC2%20Instance%20with%20LAMP%20and%20GIT.txt)
-
-[Resources](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/Setting%20up%20an%20AWS%20EC2%20Instance%20with%20LAMP%20and%20GIT.txt)
+[Resources](https://github.com/AnimeMei/GroupNumberOne/tree/master/1_TSL_Server)
 
 #### Step 2:
 SSL Config [Apache2](https://en.wikipedia.org/wiki/Apache_HTTP_Server):
@@ -55,7 +54,7 @@ ServerName Name.name
   Redirect permanent / https://Name.name/
 </VirtualHost>
 ```
-[Resources](https://github.com/AnimeMei/GroupNumberOne/blob/master/1.%20TSL%20Server/Setup%20Server%20with%20LAMP/SSL%20Config%20Apache2.txt)
+[Resources](https://github.com/AnimeMei/GroupNumberOne/blob/master/1_TSL_Server/Setup_Server_with_LAMP/SSL%20Config%20Apache2.txt)
 
 #### Step 4:
 Deploy Let's [Encrypt certificates](https://en.wikipedia.org/wiki/Let%27s_Encrypt)
@@ -69,7 +68,7 @@ Site's [certificate](https://en.wikipedia.org/wiki/Certificate_authority) and co
 
 ## 2. [Encryption](https://en.wikipedia.org/wiki/Encryption)
 
-[Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/2.%20Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
+[Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/2_Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
 |
 File format: [Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/)
 |
