@@ -10,6 +10,8 @@ Table of contents
   * [Group Number One](#group-number-one)
   * [Documentations](#documentations)
     * [1. Transport Layer Security](#transport-layer-security)
+      * [Step 1: Setting up an AWS EC2 Instance with LAMP and GIT](#step-1)
+
     * [2. Encryption](#encryption)
     * [3. RSA File](#rsa-file)
 
