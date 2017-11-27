@@ -127,8 +127,8 @@ For macOS environment installed python 3 alongside with the default python 2.7, 
     chmod +x exe/encrypt.sh
     chmod +x exe/decrypt.sh
     
-    ./exe/run_encrypt.sh
-    ./exe/run_decrypt.sh
+    ./exe/encrypt.sh
+    ./exe/decrypt.sh
     
     
 ### Linux Installation:
