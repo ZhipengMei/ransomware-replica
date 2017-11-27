@@ -104,4 +104,54 @@ Enter a file path for encrypted file output such as "encrypted_image": enc_file2
 Enter a file path for previously encrypted file: enc_file2
 Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ```
-## 3. [RSA File](https://github.com/AnimeMei/GroupNumberOne/blob/master/3.%20RSA%20File/Rough%20Draft%20-%20(RSA%20File%20-%20CECS%20378%20-%20GroupNumberOne).ipynb)
+## 3. RSA File
+
+[View Source Code](https://github.com/PizzaPat/Email_Spam_Specification/blob/master/Naive%20Bayes%20-%20Email%20Spam%20Classifier.ipynb)
+
+## System Requirements
+ [Python 3.6](https://www.python.org/downloads/release/python-361/) | [Cryptography hazmat](https://cryptography.io/en/latest/hazmat/primitives/)
+
+### macOS Installation:
+    git clone https://github.com/AnimeMei/GroupNumberOne.git
+    cd GroupNumberOne/3_RSA_File
+
+Execute the project:
+
+    chmod +x exe/run_encrypt.sh
+    chmod +x exe/run_decrypt.sh
+    
+    ./run_encrypt.sh
+    ./run_decrypt.sh
+
+For macOS environment installed python 3 alongside with the default python 2.7, execute the project with:
+    
+    chmod +x exe/encrypt.sh
+    chmod +x exe/decrypt.sh
+    
+    ./encrypt.sh
+    ./decrypt.sh
+    
+    
+### Linux Installation:
+    git clone https://github.com/AnimeMei/GroupNumberOne.git
+    cd GroupNumberOne/3_RSA_File
+
+Execute the project:
+
+    chmod +x exe/run_encrypt.sh
+    chmod +x exe/run_decrypt.sh
+    
+    ./run_encrypt.sh
+    ./run_decrypt.sh
+
+### Windows Installation:
+    git clone https://github.com/AnimeMei/GroupNumberOne.git
+    cd GroupNumberOne/3_RSA_File
+
+Execute the project:
+
+    chmod +x exe/run_encrypt.sh
+    chmod +x exe/run_decrypt.sh
+    
+    ./run_encrypt.sh
+    ./run_decrypt.sh
