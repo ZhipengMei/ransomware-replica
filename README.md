@@ -194,6 +194,27 @@ Execute the project:
     ./exe/run_encrypt.sh
     ./exe/run_decrypt.sh
     
+Or move **FileMacEncrypt.exe** to a directory contains files ready to encrypt.
+    
+    GroupNumberOne/3_RSA_File/
+    |-- drafts/
+    |
+    |-- exe/ 
+    |   |-- encrypt.sh
+    |   |-- decrypt.sh
+    |   |-- FileMacEncrypt.exe
+    |-- hello.jpg
+    |-- hi.png
+    
+move to
+    
+    MyFolder/
+    |-- FileMacEncrypt.exe
+    |-- file1.jpg
+    |-- file2.png
+ 
+Run **FileMacEncrypt.exe**
+    
 ### Sample output:
 
 Move files into **GroupNumberOne/3_RSA_File** directory for encryption:
