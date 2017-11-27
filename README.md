@@ -222,6 +222,8 @@ Move files into **GroupNumberOne/3_RSA_File** directory for encryption:
     |-- hello.jpg
     |-- hi.png
     
+E.g. **hello.jpg** and **hi.png** will be encrypted if executed.
+
 Or move **exe** folder to a directory contains files ready to encrypt.
 
     MyFolder/
