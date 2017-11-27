@@ -1,10 +1,29 @@
-# *Group Number One*
-
+Group Number One
+================
 **Welcome to Group Number One repository**
 
 This repository contains course work alongside with **[CECS 378: Introduction to Computer Security Principles](http://web.csulb.edu/divisions/aa/catalog/current/coe/computer_engineering/cecs_ud.html)**. The purpose of having course works as open source is for students to interact and help each other to learn more about cyber security concepts. Documentations are tutorials/questionnaires to guide beginners step by step to start and finish the project.
 
-# Documentations
+Table of contents
+=================
+
+  * [Group Number One](#group-number-one)
+  * [Documentations](#documentations)
+  
+<!-- 
+* [Installation](#installation)
+  * [Usage](#usage)
+    * [STDIN](#stdin)
+    * [Local files](#local-files)
+    * [Remote files](#remote-files)
+    * [Multiple files](#multiple-files)
+    * [Combo](#combo)
+  * [Tests](#tests)
+  * [Dependency](#dependency) -->
+
+
+Documentations
+==============
 
 ## 1. [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 
