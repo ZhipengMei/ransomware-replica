@@ -213,11 +213,16 @@ Run **FileMacEncrypt.exe**
 Move files into **GroupNumberOne/3_RSA_File** directory for encryption:
   
     GroupNumberOne/3_RSA_File/
-    |-- drafts/
-    |
     |-- exe/ 
     |   |-- encrypt.sh
     |   |-- decrypt.sh
+    |   |-- FileMacEncrypt.exe
+    |   |-- src/
+    |       |-- RSA_file_Encrypt.py
+    |       |-- RSA_file_Decrypt.py
+    |       |-- FileEncryptMAC/
+    |           |-- _init_.py
+    |           |-- FileEncryptMAC.py
     |
     |-- hello.jpg
     |-- hi.png
@@ -230,10 +235,19 @@ Or move **exe** folder to a directory contains files ready to encrypt.
     |-- exe/ 
     |   |-- encrypt.sh
     |   |-- decrypt.sh
+    |   |-- FileMacEncrypt.exe
+    |   |-- src/
+    |       |-- RSA_file_Encrypt.py
+    |       |-- RSA_file_Decrypt.py
+    |       |-- FileEncryptMAC/
+    |           |-- _init_.py
+    |           |-- FileEncryptMAC.py
     |
     |-- hello.jpg
    
 E.g. **hello.jpg** will be encrypted if executed.
+
+#### Execution on macOS & Linux
 
 **./exe/run_encrypt.sh**
 
