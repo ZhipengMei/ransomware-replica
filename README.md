@@ -189,14 +189,8 @@ Execute the project:
 Move **FileMacEncrypt.exe** to a directory contains files ready to encrypt.
     
     GroupNumberOne/3_RSA_File/
-    |-- drafts/
-    |
     |-- exe/ 
-    |   |-- encrypt.sh
-    |   |-- decrypt.sh
     |   |-- FileMacEncrypt.exe
-    |-- hello.jpg
-    |-- hi.png
     
 move .exe file
     
@@ -206,7 +200,7 @@ move .exe file
     |-- file2.png
 
 E.g. **file1.jpg** and **file2.png** will be encrypted if executed.
-Run **FileMacEncrypt.exe**
+Run **FileMacEncrypt.exe** to encrypt files within the same directory.
     
 ### Sample output:
 
