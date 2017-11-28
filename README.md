@@ -309,7 +309,7 @@ MydecryptMAC Complete.
 
 Success: Decrypted file with a tag. 
 
-Complete: Decrypted file named "hi.png".
+Complete: Decrypted file named "hello.png".
 ```
         MyFolder/
     |-- exe/ 
