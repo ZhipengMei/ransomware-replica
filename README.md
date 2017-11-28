@@ -236,6 +236,20 @@ Or move **exe** folder to a directory contains files ready to encrypt.
 E.g. **hello.jpg** will be encrypted if executed.
 
 **./exe/run_encrypt.sh**
+
+    MyFolder/
+    |-- exe/ 
+    |   |-- encrypt.sh
+    |   |-- decrypt.sh
+    |   |-- src/
+    |       |-- RSA_file_Encrypt.py
+    |       |-- RSA_file_Decrypt.py
+    |       |-- FileEncryptMAC/
+    |           |-- _init_.py
+    |           |-- FileEncryptMAC.py
+    |
+    |-- hello.jpg
+    
 ```
 Success: Created "public.pem" and "private.pem" 
 MyfileEncryptMAC...running
@@ -243,10 +257,37 @@ Success: Encryption finished.
 Success: HMAC tag finished.
 MyencryptMAC complete.
 Success: Encrypted file with a tag.
-Complete: Encrypted file named "../GroupNumberOne/3. RSA File/hello.encrypted.jpg".
+Complete: Create JSON file named "hi.encrypted.json".
 ```
 
+    MyFolder/
+    |-- exe/ 
+    |   |-- encrypt.sh
+    |   |-- decrypt.sh
+    |   |-- src/
+    |       |-- RSA_file_Encrypt.py
+    |       |-- RSA_file_Decrypt.py
+    |       |-- FileEncryptMAC/
+    |           |-- _init_.py
+    |           |-- FileEncryptMAC.py
+    |
+    |-- hello.encrypted.json
+
 **./exe/run_decrypt.sh**
+
+    MyFolder/
+    |-- exe/ 
+    |   |-- encrypt.sh
+    |   |-- decrypt.sh
+    |   |-- src/
+    |       |-- RSA_file_Encrypt.py
+    |       |-- RSA_file_Decrypt.py
+    |       |-- FileEncryptMAC/
+    |           |-- _init_.py
+    |           |-- FileEncryptMAC.py
+    |
+    |-- hello.encrypted.json
+    
 ```
 MyfileDecryptMAC...running
 Success: Tag verified.
@@ -254,6 +295,17 @@ MydecryptMAC Complete.
 
 Success: Decrypted file with a tag. 
 
-Complete: Decrypted file named "hello.decrypted.jpg".
+Complete: Decrypted file named "hi.png".
 ```
-
+        MyFolder/
+    |-- exe/ 
+    |   |-- encrypt.sh
+    |   |-- decrypt.sh
+    |   |-- src/
+    |       |-- RSA_file_Encrypt.py
+    |       |-- RSA_file_Decrypt.py
+    |       |-- FileEncryptMAC/
+    |           |-- _init_.py
+    |           |-- FileEncryptMAC.py
+    |
+    |-- hello.jpg
