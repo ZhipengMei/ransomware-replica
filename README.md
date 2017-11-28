@@ -16,7 +16,7 @@ Table of contents
       * [Step 4: Certbot](#step-4)
       * [Step 5: SSLlabs](#step-5)
     * [2. Encryption](#2-encryption)
-    * [3. RSA File](#3-rsa-file)
+    * [3. RSA File](#3-rsa-file-ransomware)
       * [System Requirements](#system-requirements)
       * [macOS Installation](#macos-installation)
       * [Linux Installation](#linux-installation)
