@@ -131,11 +131,11 @@ class FileEncryptMAC:
             enc_filename = os.path.splitext(filename)[0] + ".encrypted" + ext
             result += (EncKey, HMACKey, ext)
 
-            # create a writable image and write the decoding result
-            input_enc_filepath = os.path.abspath(enc_filename)
-            image_result = open(input_enc_filepath, 'wb')
-            image_result.write(result[0])
-            print("Complete: Encrypted file named \"{}\".\n".format(input_enc_filepath))
+#             # create a writable image and write the decoding result
+#             input_enc_filepath = os.path.abspath(enc_filename)
+#             image_result = open(input_enc_filepath, 'wb')
+#             image_result.write(result[0])
+#             print("Complete: Encrypted file named \"{}\".\n".format(input_enc_filepath))
             return result
         except:
             print("Error: MyfileEncryptMAC failed.\n")
@@ -143,22 +143,19 @@ class FileEncryptMAC:
 
 
     # file dencryption algorithm
-    def MyfileDecryptMAC(self, enc_filepath, iv, tag, key, h, ext):
-        print("called me")
-        with open(enc_filepath, 'rb') as f:
-            data = f.read()
+    def MyfileDecryptMAC(self, enc_filepath, C, iv, tag, key, h, ext):
+        # cipher text as bytes
+        data = C
 
         try:
             plaintext = self.MydecryptMAC(data, iv, tag, key, h)
             print("Success: Decrypted file with a tag. \n")
 
-
             dec_file_path = os.path.abspath(enc_filepath)
-
             a = os.path.basename(dec_file_path)
             c = os.path.splitext(a)
             d = os.path.splitext(c[0])
-            dec_file_path = d[0]+".decrypted"+c[1]
+            dec_file_path = d[0]+ext
 
             image_result = open(dec_file_path, 'wb') # create a writable image and write the decoding result
             image_result.write(plaintext)
@@ -233,7 +230,7 @@ class FileEncryptMAC:
 
         #obtain RSACipher
         try:
-            RSACipher = public_key.encrypt(Enckey + "break".encode() +HMACKey, asymm.padding.OAEP(
+            RSACipher = public_key.encrypt(Enckey + "thisisabreakpoint".encode() +HMACKey, asymm.padding.OAEP(
                                                    mgf=asymm.padding.MGF1(algorithm=hashes.SHA256()),
                                                    algorithm=hashes.SHA256(),
                                                    label=None ))
@@ -246,7 +243,7 @@ class FileEncryptMAC:
 
 
     #RSA decryption method
-    def MyRSADecryptMAC(self, RSACipher, enc_file_path, IV, tag, ext, RSA_Privatekey_filepath):
+    def MyRSADecryptMAC(self, RSACipher, enc_file_path, C, IV, tag, ext, RSA_Privatekey_filepath):
 
         try:
             with open(RSA_Privatekey_filepath, "rb") as Enckey:
@@ -260,7 +257,7 @@ class FileEncryptMAC:
                 asymm.padding.OAEP(mgf=asymm.padding.MGF1(algorithm=hashes.SHA256()),algorithm=hashes.SHA256(),label=None))
 
             # split the Enc_key and HMAC_key
-            key_list = key.split("break".encode())
+            key_list = key.split("thisisabreakpoint".encode())
             Enckey, HMACKey = key_list[0], key_list[1]
         except:
             print("Error: Enc_key and HMAC_key cannot be generated from RSACipher.")
@@ -268,18 +265,21 @@ class FileEncryptMAC:
 
         print("MyfileDecryptMAC...running")
         try:
-            self.MyfileDecryptMAC(enc_file_path, IV, tag, Enckey, HMACKey, ext)
+            self.MyfileDecryptMAC(enc_file_path, C, IV, tag, Enckey, HMACKey, ext)
         except:
             print("Error: MyfileDecryptMAC failed.\n")
 
 
+            
+            
     # -------------------------
     # Execution Functions Below
     # ------------------------
 
 
     ## 2: Encryption Function
-        # Encryption useage
+    
+    # Encryption useage
     def dir_encrypt(self):
 
         # 1: key check
@@ -332,6 +332,7 @@ class FileEncryptMAC:
 
                 #remove original files
                 os.remove(filepath)
+                print("Complete: Create JSON file named \"{}\".\n".format(filename))
             except:
                 print("Error: Creating JSON file failed.")
                 return
@@ -378,8 +379,7 @@ class FileEncryptMAC:
 
             try:
                 enc_filepath = os.path.abspath(filename)
-                self.MyRSADecryptMAC(data_RSACipher, enc_filepath, data_IV, data_tag, data_ext, private_key_path)
-                os.remove(enc_filepath)
+                self.MyRSADecryptMAC(data_RSACipher, file, data_C, data_IV, data_tag, data_ext, private_key_path)
                 os.remove(file)
             except:
                 print("Error: MyRSADecryptMAC failed.")
