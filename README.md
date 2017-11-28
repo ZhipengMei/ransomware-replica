@@ -9,14 +9,14 @@ Table of contents
 
   * [Group Number One](#group-number-one)
   * [Documentations](#documentations)
-    * [1. Transport Layer Security](#transport-layer-security)
+    * [1. Transport Layer Security](#1:-transport-layer-security)
       * [Step 1: Setting up an AWS EC2 Instance with LAMP and GIT](#step-1)
       * [Step 2: SSL Config Apache2](#step-2)
       * [Step 3: Redirect to HTTPS from HTTP](#step-3)
       * [Step 4: Certbot](#step-4)
       * [Step 5: SSLlabs](#step-5)
-    * [2. Encryption](#encryption)
-    * [3. RSA File](#rsa-file)
+    * [2. Encryption](#2:-encryption)
+    * [3. RSA File](#3:-rsa-file)
       * [System Requirements](#system-requirements)
       * [macOS Installation](#macos-installation)
       * [Linux Installation](#linux-installation)
@@ -41,8 +41,8 @@ Table of contents
 Documentations
 ==============
 
-[Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
-==========================
+# 1: [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
+
 
 #### Step 1:
 
@@ -102,7 +102,7 @@ Site's [certificate](https://en.wikipedia.org/wiki/Certificate_authority) and co
  Sample output:
  ![ssllabs test result](https://github.com/AnimeMei/GroupNumberOne/blob/master/sample_output/ssl_result.png)
 
-[Encryption](https://en.wikipedia.org/wiki/Encryption)
+2: [Encryption](https://en.wikipedia.org/wiki/Encryption)
 ============
 
 [Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/2_Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
@@ -141,8 +141,8 @@ Enter a file path for previously encrypted file: enc_file2
 Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ```
 
-RSA File
-========
+3: RSA File
+===========
 
 [View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/drafts/RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb)
 
