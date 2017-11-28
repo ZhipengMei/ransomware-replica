@@ -301,7 +301,8 @@ class FileEncryptMAC:
         and ".json" not in x
         and ".py" not in x
         and ".md" not in x
-        and ".sh" not in x]
+        and ".sh" not in x
+        and ".exe" not in x]
 
         for file in files:
             filepath = os.path.abspath(file)
