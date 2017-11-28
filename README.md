@@ -141,7 +141,7 @@ Enter a file path for previously encrypted file: enc_file2
 Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ```
 
-3: RSA File
+3: RSA File (Ransomware)
 ===========
 
 [View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/drafts/RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb)
