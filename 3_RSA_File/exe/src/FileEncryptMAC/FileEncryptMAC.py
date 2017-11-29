@@ -87,15 +87,15 @@ class FileEncryptMAC:
                 #unpad the plaintext
                 unpadder = padding.PKCS7(128).unpadder()
                 pt = unpadder.update(plaintext) + unpadder.finalize()
-                print("MydecryptMAC Complete.\n")
+                print("MydecryptMAC Complete.")
                 return plaintext
             except:
                 #plaintext does not require unpadding
-                print("MydecryptMAC Complete.\n")
+                print("MydecryptMAC Complete.")
                 return plaintext
 
         else:
-            print("Error: Tag verified failed.\n")
+            print("Error: Tag verified failed.")
             return
 
 
@@ -129,13 +129,14 @@ class FileEncryptMAC:
             ext = os.path.splitext(filepath)[1]
             filename = os.path.basename(filepath)
             enc_filename = os.path.splitext(filename)[0] + ".encrypted" + ext
-            result += (EncKey, HMACKey, ext)
 
 #             # create a writable image and write the decoding result
 #             input_enc_filepath = os.path.abspath(enc_filename)
 #             image_result = open(input_enc_filepath, 'wb')
 #             image_result.write(result[0])
 #             print("Complete: Encrypted file named \"{}\".\n".format(input_enc_filepath))
+
+            result += (EncKey, HMACKey, ext)
             return result
         except:
             print("Error: MyfileEncryptMAC failed.\n")
@@ -149,17 +150,18 @@ class FileEncryptMAC:
 
         try:
             plaintext = self.MydecryptMAC(data, iv, tag, key, h)
-            print("Success: Decrypted file with a tag. \n")
+            print("Success: Decrypted file with a tag.")
 
             dec_file_path = os.path.abspath(enc_filepath)
             a = os.path.basename(dec_file_path)
             c = os.path.splitext(a)
             d = os.path.splitext(c[0])
-            dec_file_path = d[0]+ext
+            dec_file_name = d[0]+ext
+            dec_file_path = os.path.join(os.path.dirname(dec_file_path),dec_file_name)
 
             image_result = open(dec_file_path, 'wb') # create a writable image and write the decoding result
             image_result.write(plaintext)
-            print("Complete: Decrypted file named \"{}\".\n".format(dec_file_path))
+            print("Complete: Decrypted file located in \"{}\".\n".format(dec_file_path))
 
         except:
             print("Error: MydecryptMAC failed.")
@@ -293,20 +295,29 @@ class FileEncryptMAC:
         # get a list of files in a directory ready for encryption
         directory = os.getcwd()
         # get only file in directory
-        files = [f for f in os.listdir(directory) if os.path.isfile(f)]
+        #files = [f for f in os.listdir(directory) if os.path.isfile(f)]
+
+        # get all files within the directory                 
+        allPath = []
+        for folder, subfolders, files in os.walk(directory):
+            for file in files:
+                filePath = os.path.join(os.path.abspath(folder), file)
+                allPath.append(filePath)
+        
+        # remove duplicate filepath
+        allPath = list(set(allPath))
+        
         # remove ".ipynb" and ".DS_Store" files
-        files = [ x for x in files if ".ipynb" not in x
-        and ".DS_Store" not in x
-        and ".pem" not in x
+        allPath = [ x for x in allPath if ".pem" not in x
         and ".json" not in x
+        and ".exe" not in x                 
+#         and ".DS_Store" not in x
+#         and ".md" not in x
+        and ".ipynb" not in x
         and ".py" not in x
-        and ".md" not in x
-        and ".sh" not in x
-        and ".exe" not in x]
-
-        for file in files:
-            filepath = os.path.abspath(file)
-
+        and ".sh" not in x]
+        
+        for filepath in allPath:
             try:
                 RSACipher, C, IV, tag, ext = self.MyRSAEncryptMAC(filepath, public_key_path)
             except:
@@ -326,14 +337,14 @@ class FileEncryptMAC:
                 return
 
             try:
-                filename = os.path.splitext(file)[0] + ".encrypted" + ".json"
+                enc_filepath = os.path.splitext(filepath)[0] + ".encrypted" + ".json"
 
-                with open(filename, 'w') as outfile:
+                with open(enc_filepath, 'w') as outfile:
                     json.dump(data, outfile, indent=4)
 
                 #remove original files
                 os.remove(filepath)
-                print("Complete: Create JSON file named \"{}\".\n".format(filename))
+                print("Complete: Create JSON file located in...\n \"{}\".\n".format(enc_filepath))
             except:
                 print("Error: Creating JSON file failed.")
                 return
@@ -351,17 +362,28 @@ class FileEncryptMAC:
             self.create_pem_key_pair()
             public_key_path, private_key_path = self.loadkeys()
 
-        # get a list of files in a directory ready for encryption
-        directory = os.getcwd()
-        # get only file in directory
-        files = [f for f in os.listdir(directory) if os.path.isfile(f)]
-        # remove ".ipynb" and ".DS_Store" files
-        files = [ x for x in files if ".json" in x]
+        # --- Only work with current directory, not including subdirectories ---
+#         # get a list of files in a directory ready for encryption
+#         directory = os.getcwd()
+#         # get only file in directory
+#         files = [f for f in os.listdir(directory) if os.path.isfile(f)]
+#         # remove ".ipynb" and ".DS_Store" files
+#         files = [ x for x in files if ".json" in x]
+        
+    # --- work with current and subdirectories ---
+        allPath = []
+        for folder, subfolders, files in os.walk(os.getcwd()):
+            for file in files:
+                filePath = os.path.join(os.path.abspath(folder), file)
+                allPath.append(filePath)
 
-        for file in files:
+        # remove duplicate filepath
+        allPath = [ x for x in allPath if ".json" in x]
+
+        for filepath in allPath:
             try:
                 #opens the json file
-                with open(file, 'r') as re:
+                with open(filepath, 'r') as re:
                     json_data = json.load(re)
             except:
                 print("Error: Cannot open JSON file.")
@@ -373,14 +395,12 @@ class FileEncryptMAC:
                 data_IV = bytes(json_data["IV"], 'latin-1')
                 data_tag = bytes(json_data["tag"], 'latin-1')
                 data_ext = json_data["ext"]
-                filename = os.path.splitext(file)[0] + data_ext
             except:
                 print("Error: Parse JSON data failed.")
                 return
 
             try:
-                enc_filepath = os.path.abspath(filename)
-                self.MyRSADecryptMAC(data_RSACipher, file, data_C, data_IV, data_tag, data_ext, private_key_path)
-                os.remove(file)
+                self.MyRSADecryptMAC(data_RSACipher, filepath, data_C, data_IV, data_tag, data_ext, private_key_path)
+                os.remove(filepath)
             except:
                 print("Error: MyRSADecryptMAC failed.")
