@@ -353,7 +353,7 @@ You can press ```ctrl+z``` then enter ```bg 2``` in the terminal to leave the se
 
 You may now test your API with Postman.
 
-#### HTTP endpoint
+### HTTP endpoint
 
 your-Public-DNS-address:3000/tasks
 
@@ -361,7 +361,7 @@ looks something like http://ec2.compute.amazonaws.com:3000/tasks
 
 Connect to this address for any POST/GET request.
 
-#### Note:
+## Note:
 
 For any reason that you would like to clear all contents in your MongoDB database.
 
@@ -370,7 +370,7 @@ Simply enter ```mongo``` then ```show dbs```
 You can choose a database to use such as ```use mydb``` then ```db.dropDatabase()``` and finally ```exit```
 
 
-#### Resources: 
+## Resources: 
 
-###### [Tutorial](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html): Setting Up Node.js on an Amazon EC2 Instance
-###### [Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04): Install MongoDB on Ubuntu 16.04
+#### [Tutorial](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html): Setting Up Node.js on an Amazon EC2 Instance
+#### [Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04): Install MongoDB on Ubuntu 16.04
