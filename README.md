@@ -23,21 +23,12 @@ Table of contents
       * [Windows Installation](#windows-installation)
       * [Sample output](#sample-output)
      * [4. RESTful API](#4-restful-api)
-
-
-
-<!--
-  * [Installation](#installation)
-  * [Usage](#usage)
-    * [Local files](#local-files)
-    * [Remote files](#remote-files)
-    * [Multiple files](#multiple-files)
-    * [Combo](#combo)
-  * [Tests](#tests)
-  * [Dependency](#dependency)
-
--->
-
+       * [System Requirements](#sample-output)
+       * [How to](#how-to)
+       * [HTTP endpoint](#http-endpoint)
+       * [Note: MongoDB control](#note-mongodb-control)
+       * [POST/GET in Python](#postget-in-python)
+       * [Resources](#resources)
 
 Documentations
 ==============
@@ -333,7 +324,7 @@ Complete: Decrypted file named "hello.png".
 
 [npm](https://www.npmjs.com/) | [Node.js](https://nodejs.org/en/) | [MongoDB](https://www.mongodb.com/) | [Atom](https://atom.io/) | [Postman](https://www.getpostman.com/) | [AWS EC2](#step-1) Instance with LAMP and GIT | [Homebrew](https://brew.sh/) for macOS | [Express](http://expressjs.com/) | [nodemon](https://nodemon.io/) | [mongoose](http://mongoosejs.com/)
 
-## How to ?
+## How to
 
 * Step 1: Build Node.js RESTful APIs [Tutorial](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd). Follow the tutorial to **create** an api. 
 
@@ -363,7 +354,7 @@ looks something like http://ec2.compute.amazonaws.com:3000/tasks
 
 Connect to this address for any POST/GET request.
 
-## Note:
+## Note: MongoDB control
 
 For any reason that you would like to clear all contents in your MongoDB database.
 
