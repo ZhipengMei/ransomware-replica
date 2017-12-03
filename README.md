@@ -17,13 +17,13 @@ Table of contents
       * [Step 5: SSLlabs](#step-5)
     * [2. Encryption](#2-encryption)
     * [3. RSA File](#3-rsa-file-ransomware)
-      * [System Requirements](#system-requirements)
+      * [RSA System Requirements](#rsa-system-requirements)
       * [macOS Installation](#macos-installation)
       * [Linux Installation](#linux-installation)
       * [Windows Installation](#windows-installation)
       * [Sample output](#sample-output)
      * [4. RESTful API](#4-restful-api)
-       * [System Requirements](#system-requirements)
+       * [API System Requirements](#api-system-requirements)
        * [How to](#how-to)
        * [HTTP endpoint](#http-endpoint)
        * [Note: MongoDB control](#note-mongodb-control)
@@ -143,7 +143,7 @@ Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 
 [View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/drafts/RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb)
 
-## System Requirements
+## RSA System Requirements
  [Python 3.6](https://www.python.org/downloads/release/python-361/) | [Cryptography hazmat](https://cryptography.io/en/latest/hazmat/primitives/)
 
 ### macOS Installation:
@@ -320,7 +320,7 @@ Complete: Decrypted file named "hello.png".
 
 [Source Code](https://github.com/AnimeMei/GroupNumberOne/tree/master/4_API/rsa_Api): Node.js & MongoDB setup | [Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/src/HTTP%20RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb): RSA Encryption & API call
 
-## System Requirements
+## API System Requirements
 
 [npm](https://www.npmjs.com/) | [Node.js](https://nodejs.org/en/) | [MongoDB](https://www.mongodb.com/) | [Atom](https://atom.io/) | [Postman](https://www.getpostman.com/) | [AWS EC2](#step-1) Instance with LAMP and GIT | [Homebrew](https://brew.sh/) for macOS | [Express](http://expressjs.com/) | [nodemon](https://nodemon.io/) | [mongoose](http://mongoosejs.com/)
 
