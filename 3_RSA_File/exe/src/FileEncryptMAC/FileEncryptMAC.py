@@ -397,10 +397,11 @@ class FileEncryptMAC:
                 data_ext = json_data["ext"]
             except:
                 print("Error: Parse JSON data failed.")
-                return
+                pass
 
             try:
                 self.MyRSADecryptMAC(data_RSACipher, filepath, data_C, data_IV, data_tag, data_ext, private_key_path)
                 os.remove(filepath)
             except:
                 print("Error: MyRSADecryptMAC failed.")
+                pass
