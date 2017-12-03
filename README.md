@@ -51,6 +51,11 @@ Tutorial: [Setting up an AWS EC2 Instance with LAMP and GIT](http://devoncmather
 
 [Resources](https://github.com/AnimeMei/GroupNumberOne/tree/master/1_TSL_Server)
 
+Once the setup process is finished, connect to Your Linux Instance Using SSH (.pem & public DNS)
+
+    ssh -i /path/my-key-pair.pem ubuntu@ec2-.amazonaws.com-my-Public-DNS-(IPv4)-address
+    
+
 #### Step 2:
 SSL Config [Apache2](https://en.wikipedia.org/wiki/Apache_HTTP_Server):
 Include the following lines into the **ssl config** file
@@ -324,4 +329,48 @@ Complete: Decrypted file named "hello.png".
 
 ## System Requirements
 
-[Node.js](https://nodejs.org/en/) | [MongoDB](https://www.mongodb.com/) | [Atom](https://atom.io/) | [Postman](https://www.getpostman.com/) | [AWS-EC2](#step-1)
+[npm](https://www.npmjs.com/) | [Node.js](https://nodejs.org/en/) | [MongoDB](https://www.mongodb.com/) | [Atom](https://atom.io/) | [Postman](https://www.getpostman.com/) | [AWS EC2](#step-1) Instance with LAMP and GIT | [Homebrew](https://brew.sh/) for macOS | [Express](http://expressjs.com/) | [nodemon](https://nodemon.io/) | [mongoose](http://mongoosejs.com/)
+
+## How to ?
+
+* Step 1: Build Node.js RESTful APIs [Tutorial](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd). Follow the tutorial to **create** an api. 
+
+* Step 2: **Push** the source code to a github repository. 
+
+You can proceed to the steps below using ssh in terminal to connect to AWS.
+
+* Step 3: **Clone** or **Pull** the github repository to the AWS server. 
+
+Once your api source code is in AWS server. 
+
+* Step 4: Activate MongdDB with ```mongod```.
+
+You can press ```ctrl+z``` then enter ```bg 1``` in the terminal to put MongoDB running in the background.
+
+* Step 5: Run server.js file with ```node server.js``` or ```npm run start```.
+
+You can press ```ctrl+z``` then enter ```bg 2``` in the terminal to leave the server running in the background.
+
+You may now test your API with Postman.
+
+#### HTTP endpoint
+
+your-Public-DNS-address:3000/tasks
+
+looks something like http://ec2.compute.amazonaws.com:3000/tasks
+
+Connect to this address for any POST/GET request.
+
+#### Note:
+
+For any reason that you would like to clear all contents in your MongoDB database.
+
+Simply enter ```mongo``` then ```show dbs```
+
+You can choose a database to use such as ```use mydb``` then ```db.dropDatabase()``` and finally ```exit```
+
+
+#### Resources: 
+
+###### [Tutorial](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html): Setting Up Node.js on an Amazon EC2 Instance
+###### [Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04): Install MongoDB on Ubuntu 16.04
