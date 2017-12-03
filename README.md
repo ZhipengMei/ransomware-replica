@@ -145,7 +145,7 @@ Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 3: RSA File
 ===========
 
-THe purpose of this file is to build a simple version of Ransomeware which only encrypt a specified directory when run by user manually. Original files will be encrypted and output as JSON files to replace the original files. Private and public keys are generated in the key folder. (Warning: do not encrypt important files nor delete private key.)
+THe purpose of this file is to build a simple version of Ransomeware which only encrypt a specified directory when run by user manually. Original files will be encrypted and output as JSON files to replace the original files. Private and public keys are generated in the key folder. (:exclamation: :exclamation::exclamation::exclamation:Warning :warning: : do not encrypt important files nor delete private key.)
 
 [View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/drafts/RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb)
 
