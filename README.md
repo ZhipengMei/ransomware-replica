@@ -23,7 +23,7 @@ Table of contents
       * [Windows Installation](#windows-installation)
       * [Sample output](#sample-output)
      * [4. RESTful API](#4-restful-api)
-       * [System Requirements](#sample-output)
+       * [System Requirements](#system-requirements)
        * [How to](#how-to)
        * [HTTP endpoint](#http-endpoint)
        * [Note: MongoDB control](#note-mongodb-control)
