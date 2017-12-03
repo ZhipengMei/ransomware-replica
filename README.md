@@ -369,7 +369,7 @@ import requests
 url = 'http://ec2.compute.amazonaws.com:3000/tasks'
 
 # POST
-post_request = requests.post(url, data={'name': 'My name is a cutie pie !!!'})
+post_request = requests.post(url, data={'name': 'My name is cutie_pie !!!'})
 
 # GET
 resp = requests.get(url=url)
