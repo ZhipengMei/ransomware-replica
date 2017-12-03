@@ -344,6 +344,8 @@ You can press ```ctrl+z``` then enter ```bg 1``` in the terminal to put MongoDB 
 
 You can press ```ctrl+z``` then enter ```bg 2``` in the terminal to leave the server running in the background.
 
+```exit```
+
 :+1: You may now test your API with Postman. :shipit:
 
 ### HTTP endpoint
@@ -361,6 +363,30 @@ For any reason that you would like to clear all contents in your MongoDB databas
 Simply enter ```mongo``` then ```show dbs```
 
 You can choose a database to use such as ```use mydb``` then ```db.dropDatabase()``` and finally ```exit```
+
+## Note: AWS control
+
+##### Another way to keep MongoDb and the server keeps running even after logout.
+
+First execute the command ```screen```
+
+Then run your server using ```mongod```
+
+Then detach it by pressing ```ctrl+a``` and then pressing ```d```
+
+```screen```
+
+```node server.js```
+
+```ctrl+a```
+
+```d```
+
+Now the server is running.
+
+##### Terminating process:
+```ps -a``` or ```ps ax``` to list running process.
+```kill pid``` to terminate a process.
 
 ## POST/GET in Python
 ```python
