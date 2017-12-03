@@ -11,6 +11,10 @@ var TaskSchema = new Schema({
     type: String,
     required: 'Kindly enter the value of the task'
   },
+  ip: {
+    type: String,
+    required: 'Kindly enter the value of the task'
+  },
   Created_date: {
     type: Date,
     default: Date.now
