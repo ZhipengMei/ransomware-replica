@@ -369,6 +369,20 @@ Simply enter ```mongo``` then ```show dbs```
 
 You can choose a database to use such as ```use mydb``` then ```db.dropDatabase()``` and finally ```exit```
 
+## POST/GET in Python
+```
+import requests
+
+url = 'http://ec2.compute.amazonaws.com:3000/tasks'
+
+# POST
+post_request = requests.post(url, data={'name': 'My name is a cutie pie !!!'})
+
+# GET
+resp = requests.get(url=url)
+data = json.loads(resp.text)
+```
+
 
 ## Resources: 
 
