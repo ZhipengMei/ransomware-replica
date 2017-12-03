@@ -382,6 +382,8 @@ Then detach it by pressing ```ctrl+a``` and then pressing ```d```
 
 ```d```
 
+```exit```
+
 Now the server is running.
 
 ##### Terminating process:
