@@ -145,7 +145,7 @@ Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 3: RSA File
 ===========
 
-THe purpose of this file is to build a simple version of Ransomeware which only encrypt a specified directory when run by user manually. Original files will be encrypted and output as JSON files to replace the original files. Private and public keys are generated in the key folder. (:exclamation: :exclamation:Warning :warning: : do not encrypt important files nor delete private key.)
+THe purpose of this file is to build a simple version of Ransomeware which only encrypt a specified directory when run by user manually. Original files will be encrypted and output as JSON files to replace the original files. Private and public keys are generated in the key folder. (:bangbang:Warning :warning: : do not encrypt important files nor delete private key.)
 
 [View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/drafts/RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb)
 
@@ -398,9 +398,10 @@ Then detach it by pressing ```ctrl+a``` and then pressing ```d```
 
 ```exit```
 
-Now the server is running.
+Now the server is running. :white_check_mark:
 
-##### Terminating process:
+
+##### Terminating process: :boom:
 ```ps -a``` or ```ps ax``` to list running process.
 ```kill pid``` to terminate a process.
 
