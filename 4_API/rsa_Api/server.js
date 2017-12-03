@@ -7,7 +7,8 @@ var express = require('express'),
 
 // mongoose instance connection url connection
 mongoose.Promise = global.Promise;
-mongoose.connect('mongodb://localhost/rsadb');
+// mongoose.connect('mongodb://localhost/rsadb');
+mongoose.connect('http://ec2-13-58-22-230.us-east-2.compute.amazonaws.com:3000/rsadb');
 
 
 app.use(bodyParser.urlencoded({ extended: true }));
