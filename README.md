@@ -16,7 +16,7 @@ Table of contents
       * [Step 4: Certbot](#step-4)
       * [Step 5: SSLlabs](#step-5)
     * [2. Encryption](#2-encryption)
-    * [3. RSA File](#3-rsa-file-ransomware)
+    * [3. RSA File](#3-rsa-file)
       * [RSA System Requirements](#rsa-system-requirements)
       * [macOS Installation](#macos-installation)
       * [Linux Installation](#linux-installation)
@@ -35,6 +35,8 @@ Documentations
 
 1: [Transport Layer Security](https://en.wikipedia.org/wiki/Transport_Layer_Security)
 =============
+
+<img src="https://www.happyhounddogresorts.com/wp-content/uploads/2017/08/HTTPS_icon.png" alt="http secure" height="50" > The purpose of this project is to setup [AWS EC2](https://aws.amazon.com/ec2/) instance. Connect **.me** domain name from [Namecheap](https://www.namecheap.com/). Clone github repository to AWS server. Setup TLS so that [HTTPS](https://en.wikipedia.org/wiki/HTTPS) appears in the URL because website is secured :ok_hand: by an TSL certificate.
 
 #### Step 1:
 
@@ -102,6 +104,8 @@ Site's [certificate](https://en.wikipedia.org/wiki/Certificate_authority) and co
 2: [Encryption](https://en.wikipedia.org/wiki/Encryption)
 ============
 
+The purpose of this project is to create 3 functions to encrypt a message, a file or RSA encrypt a file (private/public keys required). :blowfish:
+
 [Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/2_Encryption/CECS%20378%20Encryption%20Lab_GroupNumberOne.ipynb)
 |
 File format: [Jupyter Notebook](http://jupyter.org/) with [Python3](https://www.python.org/download/releases/3.0/)
@@ -138,8 +142,10 @@ Enter a file path for previously encrypted file: enc_file2
 Enter a file path for decrypted file output such as "decrypted_image": dec_file2
 ```
 
-3: RSA File (Ransomware)
+3: RSA File
 ===========
+
+THe purpose of this file is to build a simple version of Ransomeware which only encrypt a specified directory when run by user manually. Original files will be encrypted and output as JSON files to replace the original files. Private and public keys are generated in the key folder. (Warning: do not encrypt important files nor delete private key.)
 
 [View Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/drafts/RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb)
 
@@ -318,6 +324,10 @@ Complete: Decrypted file named "hello.png".
 4: RESTful API
 ===========
 
+Proeject 3 [RSA file](#3-rsa-file) was required to generate both private and public keys for encrytion and decryption. However, outputing private key on the device is no fun :snail:. The purpose of this project is to create an RESTful API. POST the private key information to the server and only output public on device. 
+
+Public key on the device is for encryption. Private key is for decryption which requires a GET APi call from the server.
+
 [Source Code](https://github.com/AnimeMei/GroupNumberOne/tree/master/4_API/rsa_Api): Node.js & MongoDB setup | [Source Code](https://github.com/AnimeMei/GroupNumberOne/blob/master/3_RSA_File/src/HTTP%20RSA%20File%20(CECS%20378%20GroupNumberOne).ipynb): RSA Encryption & API call
 
 ## API System Requirements
@@ -349,6 +359,10 @@ You can press ```ctrl+z``` then enter ```bg 2``` in the terminal to leave the se
 :+1: You may now test your API with Postman. :shipit:
 
 ### HTTP endpoint
+
+Edit inbound rule in your instance's Security Groups.
+
+![security group edit inbouds](https://cdn-images-1.medium.com/max/1000/1*CuzuWfaIsittNBeAhU2HcQ.png)
 
 your-Public-DNS-address:3000/tasks
 
