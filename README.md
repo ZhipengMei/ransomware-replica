@@ -344,7 +344,7 @@ You can press ```ctrl+z``` then enter ```bg 1``` in the terminal to put MongoDB 
 
 You can press ```ctrl+z``` then enter ```bg 2``` in the terminal to leave the server running in the background.
 
-You may now test your API with Postman.
+:+1: You may now test your API with Postman. :shipit:
 
 ### HTTP endpoint
 
@@ -363,7 +363,7 @@ Simply enter ```mongo``` then ```show dbs```
 You can choose a database to use such as ```use mydb``` then ```db.dropDatabase()``` and finally ```exit```
 
 ## POST/GET in Python
-```
+```python
 import requests
 
 url = 'http://ec2.compute.amazonaws.com:3000/tasks'
