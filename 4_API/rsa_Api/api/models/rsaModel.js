@@ -3,15 +3,15 @@ var mongoose = require('mongoose');
 var Schema = mongoose.Schema;
 
 var TaskSchema = new Schema({
+  ip: {
+    type: String,
+    required: 'Kindly enter the value of the task'
+  },
   name: {
     type: String,
     required: 'Kindly enter the name of the task'
   },
   value: {
-    type: String,
-    required: 'Kindly enter the value of the task'
-  },
-  ip: {
     type: String,
     required: 'Kindly enter the value of the task'
   },
