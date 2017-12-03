@@ -324,4 +324,4 @@ Complete: Decrypted file named "hello.png".
 
 ## System Requirements
 
-[Node.js](https://nodejs.org/en/) | [MongoDB](https://www.mongodb.com/) | [Atom](https://atom.io/) | [Postman](https://www.getpostman.com/) | [AWS-EC2]((#1-transport-layer-security))
+[Node.js](https://nodejs.org/en/) | [MongoDB](https://www.mongodb.com/) | [Atom](https://atom.io/) | [Postman](https://www.getpostman.com/) | [AWS-EC2](#step-1)
