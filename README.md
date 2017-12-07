@@ -29,7 +29,7 @@ Table of contents
        * [Note: MongoDB control](#note-mongodb-control)
        * [POST/GET in Python](#postget-in-python)
        * [Resources](#resources)
-       * [How to setup RESTful on windows and AWS ec2](#How-to-setup-RESTful-on-windows-and-AWS-ec2)
+       * [How to setup RESTful on windows and AWS ec2](#how-to-setup-restful-on-windows-and-aws-ec2)
        
 Documentations
 ==============
