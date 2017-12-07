@@ -29,7 +29,8 @@ Table of contents
        * [Note: MongoDB control](#note-mongodb-control)
        * [POST/GET in Python](#postget-in-python)
        * [Resources](#resources)
-
+       * [How to setup RESTful on windows and AWS ec2](#How-to-setup-RESTful-on-windows-and-AWS-ec2)
+       
 Documentations
 ==============
 
@@ -334,7 +335,7 @@ Public key on the device is for encryption. Private key is for decryption which 
 
 [npm](https://www.npmjs.com/) | [Node.js](https://nodejs.org/en/) | [MongoDB](https://www.mongodb.com/) | [Atom](https://atom.io/) | [Postman](https://www.getpostman.com/) | [AWS EC2](#step-1) Instance with LAMP and GIT | [Homebrew](https://brew.sh/) for macOS | [Express](http://expressjs.com/) | [nodemon](https://nodemon.io/) | [mongoose](http://mongoosejs.com/)
 
-## How to
+### How to setup RESTful on macOS and AWS ec2
 
 * Step 1: Build Node.js RESTful APIs [Tutorial](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd). Follow the tutorial to **create** an api. 
 
@@ -357,6 +358,8 @@ You can press ```ctrl+z``` then enter ```bg 2``` in the terminal to leave the se
 ```exit```
 
 :+1: You may now test your API with Postman. :shipit:
+
+
 
 ### HTTP endpoint
 
@@ -423,3 +426,7 @@ data = json.loads(resp.text)
 
 #### [Tutorial](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html): Setting Up Node.js on an Amazon EC2 Instance
 #### [Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04): Install MongoDB on Ubuntu 16.04
+
+### How to setup RESTful on windows and AWS ec2
+
+* Step 1:...
