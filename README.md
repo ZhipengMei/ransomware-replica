@@ -428,5 +428,25 @@ data = json.loads(resp.text)
 #### [Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04): Install MongoDB on Ubuntu 16.04
 
 ### How to setup RESTful on windows and AWS ec2
+* Step 1: follow the  [Tutorial](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd)
+          make sure local url work by testing from postman
+* Step 2: push the todoListApi folder from your pc to the github 
+* Step 3: Putty to the AWS ec2, clone the respository from github to the ec2
+* Step 4: install node.js and mongodb in the ec2
+         #### [Tutorial](http://docs.aws.amazon.com/sdk-for-javascript/v2/developer-guide/setting-up-node-on-ec2-instance.html): Setting               Up Node.js on an Amazon EC2 Instance
+         #### [Tutorial](https://www.digitalocean.com/community/tutorials/how-to-install-mongodb-on-ubuntu-16-04): Install MongoDB on                 Ubuntu
+          note: in this turorial, if typing word mongodb does not work try type mongod
+ * Step 5: may need to install npm feature to the ec2 again follow the  [Tutorial](https://www.codementor.io/olatundegaruba/nodejs-restful-apis-in-10-minutes-q0sgsfhbd),  run the npm in the ec2
+ * Step 6: Edit inbound rule in your instance's Security Groups.
 
-* Step 1:...
+      ![security group edit inbouds](https://cdn-images-1.medium.com/max/1000/1*CuzuWfaIsittNBeAhU2HcQ.png)
+
+      your-Public-DNS-address:3000/tasks
+
+      looks something like http://ec2.compute.amazonaws.com:3000/tasks
+
+      Connect to this address for any POST/GET request by using postman.
+ * Step 7: google the python get post code for RESTful api
+   
+ 
+
