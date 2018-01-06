@@ -1,6 +1,6 @@
-Group Number One
+Computer security
 ================
-**Welcome to Group Number One repository**
+**Welcome to GroupNumberOne's repository**
 
 This repository contains course work alongside with **[CECS 378: Introduction to Computer Security Principles](http://web.csulb.edu/divisions/aa/catalog/current/coe/computer_engineering/cecs_ud.html)**. The purpose of having course works as open source is for students to interact and help each other to learn more about cyber security concepts. Documentations are tutorials/questionnaires to guide beginners step by step to start and finish the project.
 
