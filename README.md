@@ -7,7 +7,7 @@ This repository contains course work alongside with **[CECS 378: Introduction to
 Table of contents
 =================
 
-  * [Group Number One](#group-number-one)
+  * [Group Number One](#computer-security)
   * [Documentations](#documentations)
     * [1. Transport Layer Security](#1-transport-layer-security)
       * [Step 1: Setting up an AWS EC2 Instance with LAMP and GIT](#step-1)
