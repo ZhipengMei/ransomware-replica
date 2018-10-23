@@ -1,13 +1,10 @@
-Computer security
+Ransomware Replica
 ================
-**Welcome to GroupNumberOne's repository**
-
-This repository contains course work alongside with **[CECS 378: Introduction to Computer Security Principles](http://web.csulb.edu/divisions/aa/catalog/current/coe/computer_engineering/cecs_ud.html)**. The purpose of having course works as open source is for students to interact and help each other to learn more about cyber security concepts. Documentations are tutorials/questionnaires to guide beginners step by step to start and finish the project.
+This project is a python encryption script that runs in a protected environment. It will not crash your machine. Documentations are tutorials to guide beginners step by step to start and finish the project.
 
 Table of contents
 =================
 
-  * [Group Number One](#computer-security)
   * [Documentations](#documentations)
     * [1. Transport Layer Security](#1-transport-layer-security)
       * [Step 1: Setting up an AWS EC2 Instance with LAMP and GIT](#step-1)
